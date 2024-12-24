@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Physics Notes</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism/prism.css" />
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Physics Notes</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+            Dec 2024
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li>Physics Notes</li>
+            <ol>
+                <li><a href="html/astronomy.html">Astronomy</a></li>
+                <li><a href="html/circuits.html">Circuits</a></li>
+                <li><a href="html/classical_mech.html">Classical Mechanics</a></li>
+                <li><a href="html/E&M.html">E&M</a></li>
+                <li><a href="html/gre_practice.html">GRE practice questions</a></li>
+                <li><a href="html/lab_notes.html">Lab Notes</a></li>
+                <li><a href="html/ML.html">Machine learning methods</a></li>
+                <li><a href="html/s_relativity.html">Special Relativity</a></li>
+                <li><a href="html/thermo.html">Thermodynamics</a></li>
+                <li><a href="html/waves.html">Waves</a></li>
+            </ol>
+            <li>Research topics</li>
+            <ol>
+                <li><a href="html/ds_in_astro.html">Notes on DS in Astronomy</a></li>
+                <!-- <li><a href="">Machine learning and stellar spectroscopy</a></li> -->
+                <li><a href="https://datascience.codata.org/articles/564/files/submission/proof/564-1-1299-1-10-20150521.pdf">
+                    Astronomy in the Big Data Era</a></li>
+            </ol>
+            <li>Other</li>
+            <ol>
+                <li><a href="html/resources.html">Study (and other) resources</a></li>
+                <li><a href="https://lweb.cfa.harvard.edu/~gpetitpas/Links/Astroacro.html">
+                        Dumb Or Overly Forced Astronomical Acronyms Site (or DOOFAAS)
+                    </a>
+                    <ul>
+                        <li><a href="https://arxiv.org/abs/1903.12180">i can't even-</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.youtube.com/c/pbsspacetime">[Resource]PBS Spacetime</a></li>
+                <li><a href="https://www.astronomyteacher.net/">[I don't know where to put this]</a></li>
+            </ol>
+        </ol>
+    </nav>
+</body>
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'],],
+        },
+    }
+    const typeFaceToggle = document.getElementById('typeface-toggle')
+    const typeface = document.getElementById('typeface')
+    typeFaceToggle.addEventListener('click', () => {
+        document.body.classList.toggle('libertinus')
+        typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+    })
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle')
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark')
+    })
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script async src="prism/prism.js"></script>
+</body>
+
+
+</head>

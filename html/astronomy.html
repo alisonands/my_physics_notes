@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Astronomy</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Astronomy</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav>
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#unit_conversions">Some unit conversions</a></li>
+            <li><a href="#mag_scale">The Magnitude Scale</a></li>
+            <li><a href="#spec_types">Spectral Types</a></li>
+            <li><a href="#IMF">Initial Mass Function (IMF)</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="unit_conversions">Some unit conversions</h2>
+            <ul>
+                <li>arc min - ' - $\frac{1}{60}$ of 1 degree</li>
+                <ul>
+                    <li>note: if 1 deg is $\frac{1}{360}$ of a turn, one arc min is $\frac{1}{21600}$</li>
+                </ul>
+                <li>arc sec - " - $\frac{1}{3600}$ of a degree</li>
+            </ul>
+
+            <h2 id="mag_scale">The Magnitude Scale</h2>
+            <ul>
+                <li><b>Apparent Magnitude</b> - how bright a star appears in the sky. m = 1 for brightest and m = 6 for
+                    dimmest.</li>
+                <li><b>Flux</b> - (or radiant flux, $F$) the total amount of light energy of all wavelengths per unit
+                    time. J/s</li>
+                <li><b>Luminosity</b> - Energy emitted per second</li>
+                <li>Flux and Luminosity are related by $F = \frac{L}{4\pi r^2}$</li>
+                <li><b>Absolute magnitude</b>, $M$</li>
+                <ul>
+                    <li>Defined as the apparent magnitude of a star if the observer were located at a distance of 10 pc
+                    </li>
+                    <li>$m_1 - m_2 = -2.5 \mathrm{log}_{10}(\frac{F_1}{F_2})$</li>
+                    <li>The stars distance is given by $d = 10^{(m-M+5)/5}$</li>
+                </ul>
+                <li><b>Distance modulus:</b> $m-M = 5\mathrm{log}_{10}(d)-5 = 5\mathrm{log}_{10}\frac{d}{10\mathrm{pc}}$
+                </li>
+                <li>Relation between absolute magnitude and luminosity
+                    $m=M_{Sun}-2.5\mathrm{log}_{10}(\frac{L}{L_\odot})$</li>
+            </ul>
+
+            <h2 id="spec_types">Spectral Types</h2>
+            <ul>
+                <li>O, B, A, F, G, K, M</li>
+                <li>See more: <a
+                        href="https://en.wikipedia.org/wiki/Henry_Draper_Catalogue#:~:text=The%20Henry%20Draper%20Catalogue%20(HD,and%20by%20the%20Henry%20Draper">
+                        The Henry Draper catalogue
+                    </a></li>
+            </ul>
+
+            <h2 id="IMF">Initial Mass Function(IMF)</h2>
+            <ul>
+                <li>The distribution of stellar masses in a large cluster of stars</li>
+                <li><b>Crossing time</b>: The time required for a star or galaxy to move from one side of a
+                    gravitationally bound system to another.</li>
+                <li><a href="https://arxiv.org/abs/astro-ph/9911172">
+                        Observations suggest
+                    </a>that star formation occurs in only one or two crossing times for a range of scales spanning a
+                    factor of ~1000.</li>
+                <ul>
+                    <li>This is considered a short period for the rate of formation of stars.</li>
+                </ul>
+                <li>Observations in the <a href="https://arxiv.org/pdf/astro-ph/0603278">Orion Nebula Cluster</a>(ONC)
+                    determine otherwise.</li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

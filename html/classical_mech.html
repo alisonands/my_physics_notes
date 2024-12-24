@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Classical Mechanics</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Classical Mechanics</span>
+        </h1>
+        <p class="author">
+            Alison Andrade <br />
+            Dec 2024
+        </p>
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#projectile-motion">Projectile Motion and Drag</a></li>
+            <li><a href="#energy-and-work">Energy and Work</a></li>
+            <li><a href="#center-of-mass">Center of mass</a></li>
+            <li><a href="#some-rotational-variables">Some rotational variables</a></li>
+            <li><a href="#parallel-axis-theorem">Parallel Axis theorem</a></li>
+            <li><a href="#torque">Torque</a></li>
+            <li><a href="#angular-momentum">Angular momentum</a></li>
+            <li><a href="#gravitation">Newton's law of gravitation</a></li>
+            <li><a href="#bernouilli">Bernouilli's</a></li>
+            <li><a href="#oscillations">Oscillations</a></li>
+            <ol>
+                <li><a href="">Damped oscillations</a></li>
+            </ol>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="projectile-motion">Projectile Motion and Drag</h2>
+            <ul>
+                <li>Air resistance, or drag, can be written as $f = bv + cv^2 + ...$</li>
+                <li>for linear drag, we have $\vec{f} = -b\vec{v}$, and the equation of motion is therefore $m\vec{a} =
+                    m\vec{g}-b{\vec{v}}$</li>
+                <li><b>Terminal speed</b> is given when $m\vec{a} = 0$ and is $v_{ter} = \frac{mg}{b}$, and for the
+                    quadratic
+                    case, $v_{ter} = \sqrt{\frac{mg}{c}}$</li>
+            </ul>
+        </article>
+
+        <h2 id="energy-and-work">Energy and Work</h2>
+        <ul>
+            <li><b>Kinetic energy</b>: $\frac{1}{2}mv^2$</li>
+            <li><b>Work</b>: $\int F \cdot dr$</li>
+            <li><b>Potential energy</b>: $\Delta U = -\int_a^b F(r)\,dr = -W$</li>
+            <ul>
+                <li>Gravity: $U = mgh$</li>
+                <li>Spring: $U = \frac{1}{2}kx^2$</li>
+            </ul>
+            <li><b>Power</b>: $P = \frac{dW}{dt} = \vec{F}\cdot \vec{v}$</li>
+            <li>For conservative forces, <a href="/html/math.html#Stokes_Theorem">stokes theorem</a> gives $W = \oint F
+                \cdot \, dr = 0$</li>
+        </ul>
+
+        <h2 id="center-of-mass">Center of mass</h2>
+        <ul>
+            <li>$R_{CM} = \frac{1}{M} \sum_{i=1}^n m_ir_i=\frac{1}{M}\int r\,dm$</li>
+        </ul>
+
+        <h2 id="some-rotational-variables">Some rotational variables</h2>
+        <ul>
+            <li>$\theta = \frac{s}{r}$</li>
+            <li>$\omega = \frac{d\theta}{dt}$</li>
+            <li>$\alpha = \frac{d\omega}{dt}$</li>
+        </ul>
+
+        <h2 id="parallel-axis-theorem">Parallel Axis theorem</h2>
+        <ul>
+            <li>$I = I_{CM}+Mh^2$</li>
+        </ul>
+
+        <h2 id="torque">Torque</h2>
+        <ul>
+            <li>$\tau = r \times F = I\alpha$</li>
+            <li>The work and power of torque can be written as <br>
+                $W = \int_{\theta_1}^{\theta_2} \tau \, d\theta$ <br>
+                and <br>
+                $P = \tau \cdot \omega$
+            </li>
+        </ul>
+
+        <h2 id="angular-momentum">Angular momentum</h2>
+        <ul>
+            <li>${L} = r \times p = m(r \times v)$</li>
+            <li>$\tau = \frac{dL}{dt}$</li>
+        </ul>
+
+        <h2 id="gravitation">Newton's law of gravitation</h2>
+        <ul>
+            <li>$F = \frac{GMm}{r^2}$</li>
+        </ul>
+
+        <h2 id="bernouilli">Bernouilli's</h2>
+        <ul>
+            <li>$P+\rho gy+ \frac{1}{2}\rho v^2 = \mathrm{const}$</li>
+        </ul>
+
+        <h2 id="oscillations">Oscillations</h2>
+        <ul>
+            <li>$F = m\ddot{x} = -kx$</li>
+            <li>Second order differential equation <br>
+                $\ddot{x}+\omega x^2 = 0$
+            </li>
+            <li>The period of a spring <br>
+                $T = 2\pi \sqrt{\frac{m}{k}}$
+            </li>
+            <li>The period of a simple pendulum <br>
+                $T = 2\pi \sqrt{\frac{l}{g}}$
+            </li>
+            <li>The solution(s) are as follows <br>
+                $x(t) = A cos (\omega t - \phi)$ <br>
+                $v(t) = -A\omega sin (\omega t - \phi)$ <br>
+                $a(t) = A\omega^2 cos (\omega t -\phi)$
+            </li>
+        </ul>
+        <h3 id="damped-oscillations">Damped Oscillations</h3>
+        <ul>
+            <li>Adding a damped term $-b\dot{x}$ <br>
+                $F = m\ddot{x} = -kx-b\dot{x}$
+            </li>
+            <li>Second order differential equation <br>
+                $m\ddot{x}+b\dot{x}+kx = 0$
+            </li>
+            <li>Setting $\beta = \frac{b}{2m}$ and $\omega_0 = \sqrt{\frac{k}{m}}$, the differential equation becomes <br>
+            $\ddot{x} + 2\beta\dot{x} + \omega_0^2 x = 0$
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>
+
+
+</html>

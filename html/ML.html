@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Machine Learning Methods</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Machine Learning Methods</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#supervised">Supervised learning</a></li>
+            <li><a href="#unsupervised">Unsupervised learning</a></li>
+            <li><a href="#resources">Some resources</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="supervised">Supervised learning</h2>
+            <ul>
+                <li>Classification</li>
+                <ul>
+                    <li>nearest neighbors, logistic regression, support vector machine (SVM), naive Bayes, linear discriminant
+                        analysis (LDA), quadratic discriminant analysis, tree-based
+                        models (decision tree, random forest, extremely randomized
+                        trees)</li>
+                </ul>
+                <li>Regression</li>
+                <ul>
+                    <li>nearest-neighbors, linear regression, support
+                        vector machine regression, tree-based models (decision tree,
+                        random forest, extremely randomized trees), kernel ridge regression</li>
+                </ul>
+            </ul>
+
+            <h2 id="unsupervised">Unsupervised learning</h2>
+            <ul>
+                <li>Clustering</li>
+                <ul>
+                    <li>k-means, Gaussian mixture model</li>
+                </ul>
+                <li>Dimensionality reduction</li>
+                <ul>
+                    <li>principal component analysis
+                        (PCA), linear discriminant analysis (LDA), kernel principal component analysis</li>
+                </ul>
+            </ul>
+
+
+            <h2 id="resources">Some resources</h2>
+            <ul>
+                <li><a href="https://hal.science/hal-03830094v1/file/Chapter%2002%20-%20Final.pdf">a compherensive overview</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

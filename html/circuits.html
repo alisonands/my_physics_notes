@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Circuits</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Circuits</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#circuits">Circuits</a></li>
+            <li><a href="#ac_circuit">AC circuit</a></li>
+            <ol>
+                <li><a href="#inductive_circuit">Inductive circuit</a></li>
+                <li><a href="#capacitive_circuit">Capacitive circuit</a></li>
+                <li><a href="#impedence">Impedence</a></li>
+                <li><a href="#resonant_frequency">Resonant frequency</a></li>
+            </ol>
+        </ol>
+
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="circuits">Circuits</h2>
+            <ul>
+                <li>$I_{rms} = \frac{I_0}{\sqrt{2}}$</li>
+                <li>$V_{rms} = \frac{V_0}{\sqrt{2}}$</li>
+                <li>$V = IR$</li> <br>
+                <img src="https://images.ctfassets.net/4yflszkpcwkt/aYd74MC9m8HE24NJqMsCK/4da202fe03809e53f09d21167fa9b1e5/top-5-differences-between-series-and-parallel-circuits.jpg"
+                     alt="Voltage series resistance in series and parallel" width="500">
+            </ul>
+
+            <h2 id="ac_circuits">AC circuits</h2>
+
+            <h3 id="inductive_circuit">Inductive circuit</h3>
+            <ul>
+                <li>Consist of inductor L and AC power source</li>
+                <li>Acts like resistance, given by $X_L = 2\pi f L$</li>
+                <li>The voltage is given by $V = IX_L$</li>
+                <li>high frq, less current & vice versa</li>
+                <li>Inductor stores energy</li>
+                <li>frq --> number of times signal changes direction per second</li>
+            </ul>
+
+            <h3 id="capacitive_circuit">Capacitive circuit</h3>
+            <ul>
+                <li>$X_c = \frac{1}{2\pi fc} = \frac{1}{\omega c}$</li>
+                <li>$V = IX_c$</li>
+                <li>Capacitor also stores energy like an inductor</li>
+                <li>only resistors dissipate energy</li>
+            </ul>
+
+            <h3 id="impedence">Impedence</h3>
+            <ul>
+                <li>For an RLC circuit, impedence is $Z = \sqrt{R^2+{X_L^2-X_C^2}}$</li>
+                <li>Total current in RLC circuit: $V = IZ$</li>
+                <li>phase angle: $\theta = \mathrm{tan}^{-1}\left(\frac{X_L-X_C}{R}\right)$</li>
+                <li>Power: $P = I^2R$</li>
+                <li>Average power: $\bar{P} = I_{rms}V_{rms}cos\phi$</li>
+            </ul>
+
+            <h3 id="resonant_frequency">Resonant frequency</h3>
+            <ul>
+                <li>of LC or RLC circuits: $f_R = \frac{1}{2\pi\sqrt{LC}}$</li>
+                <li>At resonant frequency, $X_C = X_L$, and $Z = R$</li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

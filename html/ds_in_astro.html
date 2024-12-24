@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>DS in Astronomy</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Data Science in Astronomy</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#collection_methods">Data Collection Methods in Astronomy</a></li>
+            <ol>
+                <li><a href="#stellar_spectral_classification">Stellar spectral classification</a></li>
+                <li><a href="#svm_regression">Support vector regression to measure stellar parameters</a></li>
+            </ol>
+            <li><a href="#ds_applications">DS applications</a></li>
+            <li><a href="#resources">Resources and Data</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="collection_methods">Data Collection Methods in Astronomy</h2>
+            <ul>
+                <li>Telescopes</li>
+                <li>Space probes</li>
+                <li>Satellites</li>
+            </ul>
+
+            <h3 id="stellar_spectral_classification">Stellar spectral classification<a
+                    href="https://watermark.silverchair.com/stad324.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA1YwggNSBgkqhkiG9w0BBwagggNDMIIDPwIBADCCAzgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMI2UlTbZVlRtsw2TVAgEQgIIDCW77zZxpgbU6nuLCDLRCJGd1VyGIAWzOo2Ea7yXLX2s0xmN5ghS_PIhMfAp7JWbo1IL0-r1wfd0U3losHoppvxfi-gs21dQCvaVbWwV0gBZdFek3fmcCkRh3sK-_PzWu7_ZXBkXM567_xewmGDcuDW4mpagedMzyr0XsOw0MZ0qHTfcpvRbnoEPTw7WEraSlVfWtqQ7eHCqUsfyue5zdo-rRWgzNy7l09l5iHEsl47C9Sam31LDA9UZjuok7OcXobQYI-mRe9sKuCo_8kgZcTmamICiZAxqleO2uSZGOwnQMEGEyDQd2ghwocdM2609LC5A2K-AQdpnjBeyx88pEGy4xRWCwVHXRGvfFvECdhkD1lb0oXP5DwPr2ZME9VWCkr2j66D03YJz1nmcK3aXjKYtJZt9vOESnG3jFphzrPBRji-Gzt7pjoX4c6IZ2TtmV5Z0csLED9tJrjjE0JwhuzULouHSRFb6w_HA1DvZvZ-VhY1or2AUoxCrgObhlwp_nhR5Qt091L2Xx2vf5UCsOq7KSbD3eISa-1WgHDV14xES-vINqSNhqPb_e1UgfhoK8NzSIHhQFAXEn9USbcfhJyqg4iXM06xmr8MiNjvON3FzEcnMSo-A1LnazzSXVvdZuhAD3kbWfTqS_7JHw5U8jp2ajNM64P0IKXj6HQhzepW60mGeGCMRyP_2QcmtTwR4_WfSjm7eXYMVONXQa9iXEeOR4lHtWQHSXbYMRbD7dwxMWHTzQc3raUceXK8u8JNYTs8h4EmQjNaEsAS11w3HOACgerKg65BLEP1UIvRTFPcF7zZNA3F4aQP0BflRwAceVPJ_Th5amHVLN8iBVIHzDXRzexrsm47Lv0l9BKdATTI1uMDMtLKiPBGD6ShAK2BfQUiA-xAZq4I12_N3yDMuUaH0MW-BlcEAsqhGxuIIdPtLNgoQq9Y5YPavHo6hLzOi5lR0P9HoeaHfOGe_euEr0eN7fQcFt8icOMvzggogiS9IL1SkgZ3vCLluDzrf1fVtXgcrnxa2S2ud4Vg">
+                    [Source]
+                </a></h3>
+            <ul>
+                <li>[data?]</li>
+                <li>Classifying Hydrogen deficient carbon (HdC) stars based on their spectra</li>
+                <li>Dimensionality reduction and clustering algorithms</li>
+                <li>Calibrate temperatures of each class of stars based on colour</li>
+                <li>Methods used: <a href="/html/ML.html#Unsupervised">PCA</a> and <a
+                        href="/html/ML.html#Unsupervised">K-means</a></li>
+            </ul>
+
+            <h3 id="svm_regression">Support vector regression to measure stellar parameters</h3>
+            <ul>
+                <li>Constructing a SVR algorithm to estimate stellar parameters of stars in J-PLUS</li>
+                <li>12 waveband <a href="https://en.wikipedia.org/wiki/Photometry_(optics)">photometry</a></li>
+                <li>label stellar effective temperature, surface gravity, and metallicity</li>
+            </ul>
+
+            <h2 id="ds_applications">DS applications</h2>
+            <ul>
+                <h3>Engineering</h3>
+                <li>Spacecraft navigation and planning</li>
+                <h3>Remote Sensing and Analysis of Extraterrestrial Objects</h3>
+                <li>Spectral Analysis</li>
+                <li>Surface Mapping</li>
+                <li>Atmospheric Studies</li>
+                <li>Galaxy spectra from SDSS</li>
+                <h3>Telescopes powered by DS</h3>
+                <li><a href="https://science.nasa.gov/mission/hubble/">HST</a>,
+                    <a href="https://www.sdss.org/">SDSS</a>,
+                    <a href="https://science.nasa.gov/mission/webb/">JWST</a>,
+                    <a href="https://elt.eso.org/">ELT</a>,
+                    <a href="https://exoplanets.nasa.gov/tess/">TESS</a>,
+                    <a href="https://rubinobservatory.org/">LSST</a>
+                </li>
+            </ul>
+
+            <h2 id="resources">Resources and Data</h2>
+            <ul>
+                <li><a href="https://hrscteam.dlr.de/public/">Mars Cloud Atlas</a> - Weather data on Mars</li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

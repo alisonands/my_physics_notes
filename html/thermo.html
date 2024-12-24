@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Thermodynamics</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Thermodynamics</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#heat_engines">Heat engines and cycles</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Process</th>
+                        <th>Definition</th>
+                        <th>Property</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Isobaric</td>
+                        <td>Const P</td>
+                        <td>$\Delta E_{int} = Q - W$</td>
+                    </tr>
+                    <tr>
+                        <td>Isovolumetric/Isochoric</td>
+                        <td>Const V</td>
+                        <td>$W = 0$, $\Delta E_{int} = Q$</td>
+                    </tr>
+                    <tr>
+                        <td>Isothermic</td>
+                        <td>Const T, $P_1V_1 = P_2V_2$</td>
+                        <td>$\Delta E_{int} = 0$, $Q = W$</td>
+                    </tr>
+                    <tr>
+                        <td>Isoentropic</td>
+                        <td>Const S</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Adiabatic</td>
+                        <td>Const Q, no heat exchange, S is constant <br>
+                            - connects high isotherm to low isotherm <br>
+                            - entropy is constant
+                        </td>
+                        <td>$Q = 0$, $\Delta E_{int} = -W$ <br>
+                            $P_1V_2^\gamma = P_2V_2^\gamma = C$
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="heat_engines">Heat engines and cycles</h2>
+            <ul>
+                <li>Work done in clockwise cycles is positive and negative in counter-clockwise cycles</li>
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

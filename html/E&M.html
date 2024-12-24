@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>E&M</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">E&M</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#maxwells_equations">Maxwells Equations</a></li>
+            <li><a href="#biot_savart">Biot Savart law</a></li>
+            <li><a href="#poynting">Poynting vector</a></li>
+            <li><a href="#faraday">Faraday's law of induction</a></li>
+            <li><a href="#relativity">Relativity</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="maxwells_equations">Maxwells equations</h2>
+
+            
+            <h2 id="biot_savart">Biot Savart law</h2>
+            <ul>
+                <li>$B = \frac{\mu_0NI}{r}$</li>
+            </ul>
+
+            <h2 id="poynting">Poynting vector</h2>
+            <ul>
+                <li>$\vec{S} = \frac{1}{\mu_0} \vec{E}\times\vec{B}$</li>
+            </ul>
+
+            <h2 id="faraday">Faraday's law of induction</h2>
+            <ul>
+                <li>A change in magnetic field gives rise to an induced current</li>
+                $$\varepsilon = \frac{-Nd\Phi_B}{dt}$$
+                <li>As area $A$ increases, flux $\Phi$ increases</li>
+                <li>The flux is $\Phi = B\cdot A = BA\mathrm{cos}\theta$</li>
+                <li>the current from the induced emf is $I = \frac{\varepsilon}{R}$ and the 
+                    power from the induced current can be given by $P = I^2R$
+                </li>
+            </ul>
+            
+            <h2 id="relativity">Relativity</h2>
+            <ul>
+                <img src="https://i98.photobucket.com/albums/l243/Physlover/ElectromagnetismandRelativity1_zpsa29fffac.jpg" 
+                alt="">
+            </ul>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Special Relativity</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header>
+        <h1><span class="latex">Special Relativity</span>
+        </h1>
+        <p class="author">
+            Alison Andrade <br />
+        </p>
+    </header>
+
+    <nav role="navigation" class="toc">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#imp_eqns">Some important equations</a></li>
+            <li><a href="#velocity_addition">Velocity addition</a></li>
+            <li><a href="#energy_and_momentum">Total energy and momentum</a></li>
+            <li><a href="#waves">Waves</a></li>
+            <li><a href="#doppler_effect">Doppler effect of sound</a></li>
+            <li><a href="#random">Random</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="imp_eqns">Some important equations</h2>
+            Lorentz transformations and velocity transformations
+            <ul>
+                <li>Velocity transformation: $x = \gamma(x'-vt)$</li>
+                <li>Time dialation: $t = \gamma (t'-\frac{vx}{c})$</li>
+                <li>Length contraction: $L = L_0\sqrt{1-\frac{v^2}{c^2}}$</li>
+            </ul>
+
+            <h2 id="velocity_addition">Velocity addition</h2>
+            <ul>
+                <li>$u_x = \frac{u_x'+v}{1+u_xv/c^2}$</li>
+            </ul>
+
+            <h2 id="energy_and_momentum">Total energy and momentum</h2>
+            <ul>
+                <li>$E^2 = \left(pc\right)^2+\left(mc^2\right)^2$</li>
+                <li>Relativistic energy: $E = \gamma mc^2$</li>
+                <li>Relativistic momentum: $\vec{p}=\gamma m \vec{v}$</li>
+                <li>Relativistic kinetic energy: $K = (\gamma-1)mc^2$</li>
+            </ul>
+
+            <h2 id="waves">Waves</h2>
+            <ul>
+                <li>Moving source in a medium: $f_r = \frac{f_s}{1-\frac{v}{v_c}}$</li>
+                <li>Moving reciever in a medium: $f_r = f_s \cdot (1+\frac{v}{v_c})$</li>
+                <li>Relativistic Doppler Shift: $f_R = f_E\sqrt{\frac{c+v}{c-v}}$, where +v corresponds to approaching and -v is moving away</li>
+            </ul>
+
+            <h2 id="doppler_effect">Doppler effect</h2>
+            <ul>
+                <li>$f_o = \frac{v\pm v_o}{v\pm v_s}f_s$</li>
+                <a href="https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_(OpenStax)/Book%3A_University_Physics_I_-_Mechanics_Sound_Oscillations_and_Waves_(OpenStax)/17%3A_Sound/17.08%3A_The_Doppler_Effect">
+                    <img src="img/doppler_shift_sound.png" alt="" width="1300">
+                </a>
+            </ul>
+
+            <h2 id="random">Random</h2>
+            <ul>
+                <li>Muon lifetime: $N(t) = N_0 \exp^{-t/\tau}$</li>
+            </ul>
+
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>
