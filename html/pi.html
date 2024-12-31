@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Approximating Pi</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Approximating Pi</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <main>
+        <article>
+            The area of a unit circle is given by $\pi$ units$^2$.
+            The area of a the square that encloses the circle is 4 units$^2$.
+            The ratios of these values is therefore $\frac{\pi}{4}$.
+            <br>
+            Suppose we fill a quadrant of the plane with randomly placed dots, where the dots inside the 
+            circle (i.e. $\sqrt{x^2+y^2} \leq 1$) are red, $r$, and the dots outside the circle are blue, $b$.
+            The ratio of the red dots to the total number of dots is given as
+            $$\frac{\pi}{4} = \frac{r}{r+b}.$$
+            <br>
+            Using this simple method, we can approximate pi as follows $\pi \approx \frac{4r}{r+b}.$
+            <pre><code class="language-html">&lt;link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css"&gt;
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>
